@@ -15,8 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="h-full">
-        {children}
-
         {/* Embed the chat widget script here */}
         <Script id="chat-widget" strategy="lazyOnload">
           {`
@@ -33,6 +31,7 @@ export default function RootLayout({
             })(document, 'script');
           `}
         </Script>
+        {children}
       </body>
     </html>
   );
